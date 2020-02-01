@@ -1,38 +1,51 @@
-<h2>To Devour:</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-3-med">
+            <img src="https://i.ytimg.com/vi/sX2DPLmkc6U/maxresdefault.jpg" alt="burgertime" width="800px">
 
-<ul>
-    {{#each burgers}}
-    {{#if devoured}}
-    {{> burgers/burger-block devoured=false}}
-    {{/if}}
-    {{/each}}
-</ul>
+        </div>
+        <div class="col-3-med">
+            <h2 class="display-4">To Devour:</h2>
 
-<h2>Eaten:</h2>
+            <ul>
+                {{#each burgers}}
+                {{#if devoured}}
+                {{> burgers/burger-block devoured=false}}
+                {{/if}}
+                {{/each}}
+            </ul>
 
-<ul>
-    {{#each burgers}}
-    {{#unless devoured}}
-    {{> burgers/burger-block devoured=true}}
-    {{/unless}}
-    {{/each}}
-</ul>
-<h2>Eat-Da-Burger</h2>
-<form class="create-form">
+            <h2 class="display-4">Eaten:</h2>
 
-    <div class="form-group">
-        <label for="ca">Burger Name:</label>
-        <input type="text" id="ca" name="name">
+            <ul>
+                {{#each burgers}}
+                {{#unless devoured}}
+                {{> burgers/burger-block devoured=true}}
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+        <div class="col-3-med">
+            <h2 class="display-4">New Burger to try?</h2>
+            <br>
+            <form class="create-form">
+
+                <div class="form-group">
+                    <label for="ca">Burger Name:</label>
+                    <input type="text" id="ca" name="name">
+                </div>
+
+                <div class="form-group">
+
+                    <label for="devoured">Had it before?</label>
+                    <br>
+                    <input type="radio" name="devoured" value="1"> Devoured earlier! <br>
+                    <input type="radio" name="devoured" value="0"> Yet to Devour!
+                </div>
+
+                <a class="btn btn-primary btn-lg" href="#" role="button" type="submit">Add burger</a><br><br>
+                <img src="https://i.makeagif.com/media/8-21-2015/dMrqsM.gif" alt="videogame">
+            </form>
+        </div>
     </div>
-
-    <div class="form-group">
-        <br>
-
-        <label for="devoured">Devoured?</label><br>
-        <br>
-        <input type="radio" name="devoured" value="1"> Devoured earlier! <br>
-        <input type="radio" name="devoured" value="0"> Yet to Devour!
-    </div>
-
-    <button type="submit">Add Burger</button>
-</form>
+</div>
