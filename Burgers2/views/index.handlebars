@@ -1,32 +1,32 @@
-<div class="container">
+<div class="container" style="background-color:rgb(9, 9, 48); color: white">
     <div class="row">
-        <div class="col-3-med">
-            <img src="https://i.ytimg.com/vi/sX2DPLmkc6U/maxresdefault.jpg" alt="burgertime" width="800px">
+        <div class="col-3-lg">
+            <img src="https://i.ytimg.com/vi/sX2DPLmkc6U/maxresdefault.jpg" alt="burgertime" width="650px">
 
         </div>
-        <div class="col-3-med">
-            <h2 class="display-4">To Devour:</h2>
+        <div class="col-3-lg">
+            <h2 class="display-5">To Eat:</h2>
 
-            <ul>
+            <ol>
                 {{#each burgers}}
                 {{#if devoured}}
                 {{> burgers/burger-block devoured=false}}
                 {{/if}}
                 {{/each}}
-            </ul>
+            </ol>
 
-            <h2 class="display-4">Eaten:</h2>
+            <h2 class="display-5">Recently consumed:</h2>
 
-            <ul>
+            <ol>
                 {{#each burgers}}
                 {{#unless devoured}}
                 {{> burgers/burger-block devoured=true}}
                 {{/unless}}
                 {{/each}}
-            </ul>
+            </ol>
         </div>
-        <div class="col-3-med">
-            <h2 class="display-4">New Burger to try?</h2>
+        <div class="col-3-lg" style="padding-left: 10rem;">
+            <h2 class="display-5">New Burger to try?</h2>
             <br>
             <form class="create-form">
 
@@ -43,9 +43,12 @@
                     <input type="radio" name="devoured" value="0"> Yet to Devour!
                 </div>
 
-                <a class="btn btn-primary btn-lg" href="#" role="button" type="submit">Add burger</a><br><br>
-                <img src="https://i.makeagif.com/media/8-21-2015/dMrqsM.gif" alt="videogame">
+                <a class="btn btn-primary btn-lg" href="#" role="button" type="submit">Add burger</a>
             </form>
+        </div>
+        <div class="col-3-lg"></div>
+        <div class="col-3-lg">
+            <img src="https://i.makeagif.com/media/8-21-2015/dMrqsM.gif" alt="videogame" style="padding-left: 10rem;">
         </div>
     </div>
 </div>

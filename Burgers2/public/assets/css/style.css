@@ -18,11 +18,17 @@ li {
 }
 
 body {
-  background-color: rgb(7, 7, 42);
+  background-color: rgb(9, 9, 48);
   color: honeydew;
   text-align: center;
+  padding: 5rem;
 }
 
 .devoured {
   font-size: medium;
+}
+
+.col-3-lg {
+  padding: 10px;
+  text-align: center;
 }
