@@ -28,7 +28,7 @@
         <div class="col-3-lg" style="padding-left: 10rem;">
             <h2 class="display-5">New Burger to try?</h2>
             <br>
-            <form class="create-form">
+            <form class="create-form" action="/api/burgers" method="POST">
 
                 <div class="form-group">
                     <label for="ca">Burger Name:</label>
@@ -43,7 +43,7 @@
                     <input type="radio" name="devoured" value="0"> Yet to Devour!
                 </div>
 
-                <a class="btn btn-primary btn-lg" href="#" role="button" type="submit">Add burger</a>
+                <button class="btn btn-primary btn-lg" href="#" role="button" type="submit">Add burger</button>
             </form>
         </div>
         <div class="col-3-lg"></div>

@@ -30,6 +30,8 @@ console.log(newDevouredState);
       devoured: $("[name=devoured]:checked").val().trim()
     };
 
+    console.log('adding burger')
+
     // Send the POST request.
     $.ajax("/api/burgers", {
       type: "POST",
